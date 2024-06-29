@@ -1,0 +1,642 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29304,        634]
+NotebookOptionsPosition[     25696,        567]
+NotebookOutlinePosition[     26146,        584]
+CellTagsIndexPosition[     26103,        581]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Load package", "Section",
+ CellChangeTimes->{{3.8823295219296513`*^9, 
+  3.882329524719922*^9}},ExpressionUUID->"ff47a007-c031-4d37-b5ce-\
+9897fe9aa13f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"<<", "\"\<ExtFileLoading.wl\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<DegFileNamings.wl\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<ArrayManip.wl\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<PlotMatexFormatting.wl\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\</..\>\""}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.879906003418742*^9, 3.87990602082522*^9}, {
+   3.8799075181053667`*^9, 3.8799075343790827`*^9}, {3.8799076810641336`*^9, 
+   3.879907681466446*^9}, 3.879946027916382*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"48efd549-3f9e-4abe-a51d-2dcf91da8f6b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"<<", "\"\<ExtFileLoading.wl\>\""}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.913426368333324*^9, 3.913426368930153*^9}, {
+  3.9134265847941275`*^9, 
+  3.9134265871907377`*^9}},ExpressionUUID->"0c4224b8-9c3a-494b-8a7f-\
+71a20260b6b2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StartExternalSession", "help", 
+   "\"For help configuring the \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Julia\\\\\\\"\\\"}]\\) evaluator, see \
+\\!\\(\\*TemplateBox[List[\\\"\\\\\\\"Configure Julia for \
+ExternalEvaluate\\\\\\\"\\\", \
+\\\"paclet:workflow/ConfigureJuliaForExternalEvaluate\\\", \
+\\\"paclet:workflow/ConfigureJuliaForExternalEvaluate\\\", \\\"Link\\\", \
+List[\\\"HyperlinkActive\\\"], Rule[BaseStyle, List[\\\"Hyperlink\\\"]], \
+Rule[Appearance, List[Small, \\\"Frameless\\\"]]], \\\"HyperlinkTemplate\\\"]\
+\\).\"", 2, 16, 8, 27894951950296155042, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9134263588440633`*^9, 3.913426386294922*^9}},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"3e166743-c2a0-4ff1-a291-6cb07f6b91b7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StartExternalSession", "replFail", 
+   "\"The process for external system \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Julia\\\\\\\"\\\"}]\\) \
+(\\!\\(\\*RowBox[{\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Ohdraw.\
+niL\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\\\\\\\\Programs\\\\\\\
+\\\\\\\\\\Julia-1.7.3\\\\\\\\\\\\\\\\bin\\\\\\\\\\\\\\\\julia.exe\\\\\\\"\\\"}\
+]\\)) failed to start.\"", 2, 16, 9, 27894951950296155042, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9134263588440633`*^9, 3.9134263866011553`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"545a9f6c-eda4-439c-8830-090521b6d24b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ExternalEvaluate", "unknownSys", 
+   "\"\\!\\(\\*InterpretationBox[RowBox[{TagBox[\\\"Failure\\\", \
+\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False, \
+Set[Typeset`embedState$$, \\\"Ready\\\"]}, \
+TemplateBox[List[PaneSelectorBox[List[Rule[False, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SummaryBoxOpener\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, True]], Rule[Appearance, None], Rule[BaseStyle, List[]], \
+Rule[Evaluator, Automatic], Rule[Method, \\\"Preemptive\\\"]], \
+Rule[Alignment, List[Center, Center]], Rule[ImageSize, \
+Dynamic[List[Automatic, Times[3.5`, \
+Times[CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]]], \
+FrameBox[StyleBox[\\\"\\\\\\\"\\\\[WarningSign]\\\\\\\"\\\", \
+Directive[\\\"Message\\\", 35], Rule[StripOnInput, False]], \
+Rule[ContentPadding, False], Rule[FrameStyle, None], Rule[FrameMargins, \
+List[List[0, 0], List[0, 0]]], Rule[StripOnInput, False]], \
+GridBox[List[List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"Command\\\\\
+\\\"\\\", \\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[RowBox[List[\\\"{\\\", RowBox[List[\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\
+\\\\\\\\\\\\\\\\Ohdraw.niL\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\
+\\\\\\\\Programs\\\\\\\\\\\\\\\\Julia-1.7.3\\\\\\\\\\\\\\\\bin\\\\\\\\\\\\\\\\\
+julia.exe\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\
+\\\\\\\\\\\\\\\\Wolfram \
+Research\\\\\\\\\\\\\\\\Mathematica\\\\\\\\\\\\\\\\13.1\\\\\\\\\\\\\\\\\
+SystemFiles\\\\\\\\\\\\\\\\Components\\\\\\\\\\\\\\\\ExternalEvaluate_Julia\\\
+\\\\\\\\\\\\\\Resources\\\\\\\\\\\\\\\\start_julia.jl\\\\\\\"\\\"]], \
+\\\"}\\\"]], \\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"StandardError\\\\\\\"\\\"\
+, \\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \\\"SummaryItemAnnotation\
+\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\\\"\\\\\\\"\\\", \
+\\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"Tag\\\\\\\"\\\", \
+\\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \\\"SummaryItemAnnotation\\\
+\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"\\\\\\\"ProcessError\\\\\\\"\\\", \\\"SummaryItem\\\"]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
+Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
+\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
+False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
+Rule[\\\"Rows\\\", List[List[Top]]]]], Rule[AutoDelete, False], \
+Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaselinePosition, List[1, \
+1]]]], Rule[True, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SummaryBoxCloser\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, False]], Rule[Appearance, None], Rule[BaseStyle, List[]], \
+Rule[Evaluator, Automatic], Rule[Method, \\\"Preemptive\\\"]], \
+Rule[Alignment, List[Center, Center]], Rule[ImageSize, \
+Dynamic[List[Automatic, Times[3.5`, \
+Times[CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]]], \
+FrameBox[StyleBox[\\\"\\\\\\\"\\\\[WarningSign]\\\\\\\"\\\", \
+Directive[\\\"Message\\\", 35], Rule[StripOnInput, False]], \
+Rule[ContentPadding, False], Rule[FrameStyle, None], Rule[FrameMargins, \
+List[List[0, 0], List[0, 0]]], Rule[StripOnInput, False]], \
+GridBox[List[List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"Command\\\\\
+\\\"\\\", \\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[RowBox[List[\\\"{\\\", RowBox[List[\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\
+\\\\\\\\\\\\\\\\Ohdraw.niL\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\
+\\\\\\\\Programs\\\\\\\\\\\\\\\\Julia-1.7.3\\\\\\\\\\\\\\\\bin\\\\\\\\\\\\\\\\\
+julia.exe\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\
+\\\\\\\\\\\\\\\\Wolfram \
+Research\\\\\\\\\\\\\\\\Mathematica\\\\\\\\\\\\\\\\13.1\\\\\\\\\\\\\\\\\
+SystemFiles\\\\\\\\\\\\\\\\Components\\\\\\\\\\\\\\\\ExternalEvaluate_Julia\\\
+\\\\\\\\\\\\\\Resources\\\\\\\\\\\\\\\\start_julia.jl\\\\\\\"\\\"]], \
+\\\"}\\\"]], \\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"StandardError\\\\\\\"\\\"\
+, \\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \\\"SummaryItemAnnotation\
+\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\\\"\\\\\\\"\\\", \
+\\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"Tag\\\\\\\"\\\", \
+\\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \\\"SummaryItemAnnotation\\\
+\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"\\\\\\\"ProcessError\\\\\\\"\\\", \\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[TemplateBox[List[\\\"\\\\\\\"StandardOutput\\\\\\\"\\\
+\", \\\"\\\\\\\": \\\\\\\"\\\"], \\\"RowDefault\\\"], \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"$Aborted\\\", \\\"SummaryItem\\\"]]]]], Rule[GridBoxAlignment, \
+List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
+List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
+List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
+List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
+Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
+Rule[\\\"Rows\\\", List[List[Top]]]]], Rule[AutoDelete, False], \
+Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaselinePosition, List[1, \
+1]]]]], Dynamic[Typeset`open$$], Rule[ImageSize, Automatic]]], \
+\\\"SummaryPanel\\\"], RuleDelayed[DynamicModuleValues, List[]]], \
+\\\"]\\\"}], Failure[\\\"ProcessError\\\", Association[Rule[\\\"Command\\\", \
+List[\\\"C:\\\\\\\\Users\\\\\\\\Ohdraw.niL\\\\\\\\AppData\\\\\\\\Local\\\\\\\\\
+Programs\\\\\\\\Julia-1.7.3\\\\\\\\bin\\\\\\\\julia.exe\\\", \
+\\\"C:\\\\\\\\Program Files\\\\\\\\Wolfram \
+Research\\\\\\\\Mathematica\\\\\\\\13.1\\\\\\\\SystemFiles\\\\\\\\Components\\\
+\\\\\\ExternalEvaluate_Julia\\\\\\\\Resources\\\\\\\\start_julia.jl\\\"]], \
+Rule[\\\"StandardError\\\", \\\"\\\"], Rule[\\\"StandardOutput\\\", \
+$Aborted]]], Rule[Selectable, False], Rule[Editable, False], \
+Rule[SelectWithContents, True]]\\) is not a known system in the \
+ExternalEvaluate Framework.\"", 2, 16, 10, 27894951950296155042, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.9134263588440633`*^9, 3.9134263867766867`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"18f1e128-077b-4a7d-a4b1-6007eb655cb0"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"sessJul", "=", 
+    RowBox[{"StartExternalSession", "[", "\"\<Julia\>\"", "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.913426578517964*^9, 
+  3.913426580401929*^9}},ExpressionUUID->"ae926030-04dc-4b7d-b8c8-\
+fac918213257"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"ExternalEvaluate", "[", 
+    RowBox[{"sessJul", ",", "\"\<using JLD, JLD2\>\""}], "]"}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.9134265748372345`*^9, 
+  3.9134265761978903`*^9}},ExpressionUUID->"6965ff12-8f4c-4fde-9a06-\
+c514ac28d20e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<ExtFileLoading.wl\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\</..\>\""}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.890832375280871*^9, 3.890832380611595*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5b4c1bf4-81d1-4d68-8b71-af9debe6b7d2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Params", "Section",
+ CellChangeTimes->{{3.897484064365843*^9, 
+  3.8974840650533695`*^9}},ExpressionUUID->"a7423480-4175-42ce-bb81-\
+96adf99f2a0f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fMain", "=", "\"\<deg_GOE3\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8974840708696747`*^9, 3.8974840717108126`*^9}, {
+  3.897484139114316*^9, 3.89748414333037*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"27a1f2bc-1fd6-4176-ba7a-0cf29dfdc185"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "fileName", "=", 
+   "\"\<deg_GOE3_dim_3_N_4_param_divide_[64, 64, \
+64]_instanceNum_5_seed_1000.jld2\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8974841509710245`*^9, 3.8974841738563356`*^9}, 
+   3.897484306880117*^9, {3.9134257250548697`*^9, 3.9134257386055527`*^9}, {
+   3.913427296866267*^9, 3.913427297298994*^9}, {3.913427342629021*^9, 
+   3.9134273433306885`*^9}, 3.9134275104189367`*^9, 3.913430446709855*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"739490d7-2666-4be3-8bac-aaf915d5ab4b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "fileNameOld", "=", 
+   "\"\<deg_GOE_3d_full_dim_3_N_4_param_divide_[64, 64, \
+64]_instanceNum_2_seed_1000.jld2\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.913429264510172*^9, 3.9134292710806365`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"183507a9-e559-45da-b184-8562d554be34"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"locLst", "=", 
+   RowBox[{"readJuliaVar", "[", 
+    RowBox[{"fileName", ",", "\"\<locLst\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.897484424275745*^9, 3.8974844350407743`*^9}, {
+   3.9134257532112436`*^9, 3.9134257542358074`*^9}, {3.9134273007429504`*^9, 
+   3.9134273155934315`*^9}, 3.9134275204630466`*^9, {3.913428025214282*^9, 
+   3.913428036522969*^9}, {3.9134307235305204`*^9, 3.9134307242155533`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"1072e11f-1353-422d-8e3a-bd9af743a9f1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"posLocLst", "=", 
+   RowBox[{"readJuliaVar", "[", 
+    RowBox[{"fileNameOld", ",", "\"\<posLocLst\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9134292751212482`*^9, 3.9134292907512026`*^9}, {
+  3.9134307210313897`*^9, 
+  3.913430722119884*^9}},ExpressionUUID->"51911237-dba9-4b94-b1bd-\
+2e309f5a4b52"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"posLocLst", "//", "Dimensions"}]], "Input",
+ CellChangeTimes->{{3.9134293519805045`*^9, 3.9134293547002482`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"a65065df-e8c0-4403-b3bd-0703dcd1cbe3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "3", ",", "4", ",", "64", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{3.9134293573033657`*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"8ae3f270-61d4-4193-bfd0-31813cb3cf94"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"locLst", "//", "Dimensions"}]], "Input",
+ CellChangeTimes->{{3.913430457070834*^9, 3.9134304614939766`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"24cabdf0-b202-477f-b582-c356d3a24e0a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"64", ",", "5", ",", "4", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9134304619969997`*^9, {3.9134307277393904`*^9, 3.9134307324812975`*^9}},
+ CellLabel->"Out[43]=",ExpressionUUID->"75fc4bd4-69ca-43ed-9dae-9923375a0471"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"locLst", "\[LeftDoubleBracket]", 
+   RowBox[{"1", ",", "1", ",", "4"}], "\[RightDoubleBracket]"}], 
+  "\[Transpose]"}]], "Input",
+ CellChangeTimes->{{3.9134304722182703`*^9, 3.91343048211798*^9}, {
+  3.9134307107756257`*^9, 3.9134307108856344`*^9}, {3.9134307413033123`*^9, 
+  3.9134307870157375`*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"eb61e779-8ef2-4b2a-8c86-ab4e16936712"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"51", ",", "29", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"38", ",", "44", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"39", ",", "44", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "59", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"29", ",", "17", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"43", ",", "52", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"17", ",", "53", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "57", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.913430483508369*^9, {3.913430711239002*^9, 3.9134307873533382`*^9}},
+ CellLabel->"Out[50]=",ExpressionUUID->"91fca93a-09b4-497e-8851-34309efbc922"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"locLst", "\[LeftDoubleBracket]", 
+  RowBox[{"1", ",", "1", ",", "3"}], "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.913428084526738*^9, 3.9134280876290946`*^9}, {
+  3.9134306192586985`*^9, 3.913430626504376*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"a11176e9-e61c-4be3-86a9-8ae1f72412f4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"6", ",", "7", ",", "37"}], "}"}]], "Output",
+ CellChangeTimes->{{3.913428081950593*^9, 3.913428088006324*^9}, {
+  3.913430619858384*^9, 3.9134306268195267`*^9}},
+ CellLabel->"Out[38]=",ExpressionUUID->"3b3e6913-c328-44fe-9bb3-d7b1d9ca1e26"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nDim", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mSz", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"divLst", "="}], ";"}]}], "Input",
+ CellChangeTimes->{{3.897484202058553*^9, 
+  3.897484233476859*^9}},ExpressionUUID->"faefec4f-0081-4e3c-8bd0-\
+279d9e382cb8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Miscellaneous", "Section",
+ CellChangeTimes->{{3.9134267044527617`*^9, 
+  3.9134267062988577`*^9}},ExpressionUUID->"168ef878-9428-44d2-81b3-\
+972a6ab94364"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"fileExistJulia", "[", "fileName", "]"}]], "Input",
+ CellChangeTimes->{{3.9134276057022505`*^9, 3.913427608166197*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"82f21348-fe9b-4564-b5a8-9a4193efe191"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.91342761056707*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"e55ce977-ae4f-41ff-b9d1-91b10304ab5b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"fileExistJulia", "[", 
+  "\"\<D:\\\\Ohdraw.niL\\\\OneDrive - UC San \
+Diego\\\\Programming\\\\Julia\\\\Modules\\\\deg_GOE_3d_full_dim_3_N_4_param_\
+divide_[80, 80, 80]_instanceNum_1_seed_1000.jld\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.9134267859012985`*^9, 3.91342680368227*^9}, 
+   3.9134269303082104`*^9, {3.913427155911564*^9, 3.9134271638508644`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"4f947a6d-465a-4202-8d6e-a8bbb07182b2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Failure",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Traceback\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                  "\"Base.Meta.ParseError(\\\"invalid escape \
+sequence\\\")\\nStacktrace:\\n [1] #parse#3\\n   @ .\\\\meta.jl:237 [inlined]\
+\\n [2] parse(str::String; raise::Bool, depwarn::Bool)\\n   @ Base.Meta \
+.\\\\meta.jl:268\\n [3] parse\\n   @ .\\\\meta.jl:268 [inlined]\\n [4] \
+handle_message(json_dict::Dict{String, Any})\\n   @ Main C:\\\\Program \
+Files\\\\Wolfram Research\\\\Mathematica\\\\13.1\\\\SystemFiles\\\\Components\
+\\\\ExternalEvaluate_Julia\\\\Resources\\\\start_julia.jl:64\\n [5] top-level \
+scope\\n   @ C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\13.1\\\
+\\SystemFiles\\\\Components\\\\ExternalEvaluate_Julia\\\\Resources\\\\start_\
+julia.jl:118\\n [6] include(mod::Module, _path::String)\\n   @ Base \
+.\\\\Base.jl:418\\n [7] exec_options(opts::Base.JLOptions)\\n   @ Base \
+.\\\\client.jl:292\\n [8] _start()\\n   @ Base .\\\\client.jl:495\"", 
+                   HoldForm], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox["\"JuliaError\"", HoldForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Traceback\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                  "\"Base.Meta.ParseError(\\\"invalid escape \
+sequence\\\")\\nStacktrace:\\n [1] #parse#3\\n   @ .\\\\meta.jl:237 [inlined]\
+\\n [2] parse(str::String; raise::Bool, depwarn::Bool)\\n   @ Base.Meta \
+.\\\\meta.jl:268\\n [3] parse\\n   @ .\\\\meta.jl:268 [inlined]\\n [4] \
+handle_message(json_dict::Dict{String, Any})\\n   @ Main C:\\\\Program \
+Files\\\\Wolfram Research\\\\Mathematica\\\\13.1\\\\SystemFiles\\\\Components\
+\\\\ExternalEvaluate_Julia\\\\Resources\\\\start_julia.jl:64\\n [5] top-level \
+scope\\n   @ C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\13.1\\\
+\\SystemFiles\\\\Components\\\\ExternalEvaluate_Julia\\\\Resources\\\\start_\
+julia.jl:118\\n [6] include(mod::Module, _path::String)\\n   @ Base \
+.\\\\Base.jl:418\\n [7] exec_options(opts::Base.JLOptions)\\n   @ Base \
+.\\\\client.jl:292\\n [8] _start()\\n   @ Base .\\\\client.jl:495\"", 
+                   HoldForm], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox["\"JuliaError\"", HoldForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Failure[
+  "JuliaError", <|
+   "Traceback" -> 
+    "Base.Meta.ParseError(\"invalid escape sequence\")\nStacktrace:\n [1] \
+#parse#3\n   @ .\\meta.jl:237 [inlined]\n [2] parse(str::String; raise::Bool, \
+depwarn::Bool)\n   @ Base.Meta .\\meta.jl:268\n [3] parse\n   @ \
+.\\meta.jl:268 [inlined]\n [4] handle_message(json_dict::Dict{String, Any})\n \
+  @ Main C:\\Program Files\\Wolfram \
+Research\\Mathematica\\13.1\\SystemFiles\\Components\\ExternalEvaluate_Julia\\\
+Resources\\start_julia.jl:64\n [5] top-level scope\n   @ C:\\Program \
+Files\\Wolfram \
+Research\\Mathematica\\13.1\\SystemFiles\\Components\\ExternalEvaluate_Julia\\\
+Resources\\start_julia.jl:118\n [6] include(mod::Module, _path::String)\n   @ \
+Base .\\Base.jl:418\n [7] exec_options(opts::Base.JLOptions)\n   @ Base \
+.\\client.jl:292\n [8] _start()\n   @ Base .\\client.jl:495"|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.9134268043247323`*^9, 3.9134268337820225`*^9}, {
+   3.9134269022009935`*^9, 3.913426931209569*^9}, 3.9134270788816447`*^9, 
+   3.913427129199469*^9, 3.913427167894143*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"cc4eb1e5-ebc7-4a97-8aa6-86153d0068a8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Directory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.913427085192924*^9, 3.9134270873224225`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"4ecb3e13-5eb1-44d9-bbe0-b637911fc216"],
+
+Cell[BoxData["\<\"D:\\\\Ohdraw.niL\\\\OneDrive - UC San \
+Diego\\\\Programming\\\\Julia\\\\Modules\"\>"], "Output",
+ CellChangeTimes->{3.9134270878253784`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"c144c115-8dda-405a-b212-db5eabf4cff3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{735., 493.79999999999995`},
+WindowMargins->{{Automatic, 82.20000000000005}, {
+  22.800000000000068`, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6b3dca67-7086-4893-b2f2-e979d94fa23e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 159, 3, 67, "Section",ExpressionUUID->"ff47a007-c031-4d37-b5ce-9897fe9aa13f"],
+Cell[742, 27, 878, 20, 124, "Input",ExpressionUUID->"48efd549-3f9e-4abe-a51d-2dcf91da8f6b"],
+Cell[CellGroupData[{
+Cell[1645, 51, 410, 10, 48, "Input",ExpressionUUID->"0c4224b8-9c3a-494b-8a7f-71a20260b6b2"],
+Cell[2058, 63, 812, 16, 28, "Message",ExpressionUUID->"3e166743-c2a0-4ff1-a291-6cb07f6b91b7"],
+Cell[2873, 81, 683, 13, 46, "Message",ExpressionUUID->"545a9f6c-eda4-439c-8830-090521b6d24b"],
+Cell[3559, 96, 7421, 114, 138, "Message",ExpressionUUID->"18f1e128-077b-4a7d-a4b1-6007eb655cb0"]
+}, Open  ]],
+Cell[10995, 213, 289, 8, 28, "Input",ExpressionUUID->"ae926030-04dc-4b7d-b8c8-fac918213257"],
+Cell[11287, 223, 299, 8, 28, "Input",ExpressionUUID->"6965ff12-8f4c-4fde-9a06-c514ac28d20e"],
+Cell[11589, 233, 523, 13, 67, "Input",ExpressionUUID->"5b4c1bf4-81d1-4d68-8b71-af9debe6b7d2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12149, 251, 153, 3, 67, "Section",ExpressionUUID->"a7423480-4175-42ce-bb81-96adf99f2a0f"],
+Cell[12305, 256, 282, 5, 28, "Input",ExpressionUUID->"27a1f2bc-1fd6-4176-ba7a-0cf29dfdc185"],
+Cell[12590, 263, 536, 10, 48, "Input",ExpressionUUID->"739490d7-2666-4be3-8bac-aaf915d5ab4b"],
+Cell[13129, 275, 320, 7, 48, "Input",ExpressionUUID->"183507a9-e559-45da-b184-8562d554be34"],
+Cell[13452, 284, 536, 9, 28, "Input",ExpressionUUID->"1072e11f-1353-422d-8e3a-bd9af743a9f1"],
+Cell[13991, 295, 350, 9, 28, "Input",ExpressionUUID->"51911237-dba9-4b94-b1bd-2e309f5a4b52"],
+Cell[CellGroupData[{
+Cell[14366, 308, 216, 3, 28, "Input",ExpressionUUID->"a65065df-e8c0-4403-b3bd-0703dcd1cbe3"],
+Cell[14585, 313, 227, 4, 32, "Output",ExpressionUUID->"8ae3f270-61d4-4193-bfd0-31813cb3cf94"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14849, 322, 211, 3, 28, "Input",ExpressionUUID->"24cabdf0-b202-477f-b582-c356d3a24e0a"],
+Cell[15063, 327, 270, 5, 32, "Output",ExpressionUUID->"75fc4bd4-69ca-43ed-9dae-9923375a0471"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15370, 337, 416, 8, 28, "Input",ExpressionUUID->"eb61e779-8ef2-4b2a-8c86-ab4e16936712"],
+Cell[15789, 347, 791, 21, 103, "Output",ExpressionUUID->"91fca93a-09b4-497e-8851-34309efbc922"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16617, 373, 329, 5, 28, "Input",ExpressionUUID->"a11176e9-e61c-4be3-86a9-8ae1f72412f4"],
+Cell[16949, 380, 280, 5, 32, "Output",ExpressionUUID->"3b3e6913-c328-44fe-9bb3-d7b1d9ca1e26"]
+}, Open  ]],
+Cell[17244, 388, 336, 9, 67, "Input",ExpressionUUID->"faefec4f-0081-4e3c-8bd0-279d9e382cb8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17617, 402, 162, 3, 67, "Section",ExpressionUUID->"168ef878-9428-44d2-81b3-972a6ab94364"],
+Cell[CellGroupData[{
+Cell[17804, 409, 221, 3, 28, "Input",ExpressionUUID->"82f21348-fe9b-4564-b5a8-9a4193efe191"],
+Cell[18028, 414, 152, 2, 32, "Output",ExpressionUUID->"e55ce977-ae4f-41ff-b9d1-91b10304ab5b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18217, 421, 463, 7, 86, "Input",ExpressionUUID->"4f947a6d-465a-4202-8d6e-a8bbb07182b2"],
+Cell[18683, 430, 6505, 120, 428, "Output",ExpressionUUID->"cc4eb1e5-ebc7-4a97-8aa6-86153d0068a8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25225, 555, 203, 3, 28, "Input",ExpressionUUID->"4ecb3e13-5eb1-44d9-bbe0-b637911fc216"],
+Cell[25431, 560, 237, 3, 32, "Output",ExpressionUUID->"c144c115-8dda-405a-b212-db5eabf4cff3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
